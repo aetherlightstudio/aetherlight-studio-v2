@@ -4,7 +4,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import aetherlightLogo from "../../assets/AETHERLIGHT STUDIO.png";
 import lawrenceImg from "../../assets/Lawrence (1).jpg";
 import danielImg from "../../assets/Daniel.jpg";
-import sebasthianImg from "../../assets/Sebasthian.jpg";
+import sebasthianImg from "../../assets/badings.jpg";
 import justinImg from "../../assets/BADING.png";
 import princessImg from "../../assets/Princess.jpg";
 
