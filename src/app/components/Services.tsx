@@ -6,66 +6,71 @@ export function Services() {
     {
       icon: Film,
       title: "3D Animation",
-      description: "Breathtaking 3D animations that bring characters and worlds to life with stunning detail and realism.",
-      features: ["Character Animation", "Environment Design", "Rigging & Modeling", "Rendering"],
+      description: "Bring your ideas to life in 3D! We focus on creativity, learning, and fun while making detailed animations.",
+      features: ["Character Animation", "World & Environment Design", "Modeling & Rigging", "Rendering & Scenes"],
     },
     {
       icon: Zap,
       title: "Motion Graphics",
-      description: "Dynamic motion graphics that captivate audiences and communicate your message with impact.",
-      features: ["Logo Animation", "Kinetic Typography", "Explainer Videos", "Social Media Content"],
+      description: "Make your ideas move! Fun motion graphics for videos, presentations, and social media.",
+      features: ["Animated Logos", "Text & Typing Effects", "Short Explainer Clips", "Social Media Videos"],
     },
     {
       icon: Palette,
       title: "2D Animation",
-      description: "Charming 2D animations with artistic flair, perfect for storytelling and brand communication.",
-      features: ["Character Design", "Frame-by-Frame", "Digital Illustration", "Storyboarding"],
+      description: "Colorful and creative storytelling! Perfect for school projects or simple animations.",
+      features: ["Character Design", "Frame-by-Frame Animation", "Digital Drawing & Illustration", "Storyboards"],
     },
     {
       icon: Sparkles,
-      title: "Visual Effects",
-      description: "Industry-leading VFX that seamlessly blend reality with imagination for stunning visual impact.",
-      features: ["Compositing", "CGI Integration", "Particle Effects", "Color Grading"],
+      title: "Visual Effects (VFX)",
+      description: "Add cool effects to your videos! Make your animations and videos more exciting.",
+      features: ["Simple CGI & Compositing", "Particles & Fun Effects", "Color Adjustments", "Screen Enhancements"],
     },
     {
       icon: Package,
-      title: "Brand Identity",
-      description: "Comprehensive brand animation packages that establish and elevate your visual identity.",
-      features: ["Brand Guidelines", "Style Frames", "Animation Systems", "Asset Libraries"],
+      title: "Brand & Identity",
+      description: "Help your project or brand look unique! Simple designs and animations that stand out.",
+      features: ["Logo & Mascot Design", "Style Frames", "Simple Motion Graphics", "Visual Guides"],
     },
     {
       icon: TrendingUp,
-      title: "Commercial Production",
-      description: "Full-service commercial production from concept to final delivery, optimized for all platforms.",
-      features: ["Creative Strategy", "Script Development", "Production", "Post-Production"],
+      title: "Video Production",
+      description: "Turn your ideas into videos! Perfect for school projects, promos, or social media content.",
+      features: ["Story & Script Ideas", "Animation & Editingt", "Music & Sound Effects", "Social Media Ready Clips"],
     },
   ];
 
   const process = [
     {
       number: "01",
-      title: "Discovery",
-      description: "We start by understanding your vision, goals, and target audience to craft the perfect creative strategy.",
+      title: "Brainstorm & Research",
+      description: "We start by understanding the project requirements, exploring ideas, and thinking critically about the story and goals.",
     },
     {
       number: "02",
-      title: "Concept",
-      description: "Our team develops initial concepts, storyboards, and style frames to visualize the final product.",
+      title: "Script & Storyboarding",
+      description: "We write the script and create storyboards to map out the scenes, actions, and flow of the animation.",
     },
     {
       number: "03",
-      title: "Production",
-      description: "With approved concepts, we bring your project to life through animation, design, and effects.",
+      title: "Pre-Production",
+      description: "We prepare all assets, designs, character sketches, and style frames to set the stage for production.",
     },
     {
       number: "04",
-      title: "Refinement",
-      description: "We collaborate closely with you to refine and polish every detail until it's perfect.",
+      title: "Production",
+      description: "We bring the project to life! Animation, rigging, modeling, and visual effects are created according to the storyboard.",
     },
     {
       number: "05",
-      title: "Delivery",
-      description: "Final assets are delivered in all required formats, optimized for your specific needs.",
+      title: "Post-Production",
+      description: "We edit, add sound, color grade, and refine every detail to make the final output smooth and polished.",
+    },
+     {
+      number: "06",
+      title: "Showcase & Delivered",
+      description: "From concept to completion, your project is polished, finalized, and ready to be showcased—perfect for submission, sharing online, or adding to your portfolio.",
     },
   ];
 
@@ -84,8 +89,8 @@ export function Services() {
               Our <span className="text-purple-400">Services</span>
             </h1>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-              From concept to completion, we offer comprehensive animation and
-              creative services tailored to your needs.
+              We create animations, character designs, and creative projects that bring ideas to life. 
+              Every project is a chance for our team to experiment, learn, and share our creativity.
             </p>
           </motion.div>
         </div>
@@ -137,7 +142,7 @@ export function Services() {
               Our <span className="text-purple-400">Process</span>
             </h2>
             <p className="text-zinc-400 text-lg">
-              A streamlined approach to creating exceptional animations
+              Step-by-step guide to turning your ideas into polished animations
             </p>
           </motion.div>
 
@@ -180,25 +185,25 @@ export function Services() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why Choose <span className="text-purple-400">AnimaStudio</span>
+                Why Choose <span className="text-purple-400">AetherLight Studio</span>
               </h2>
               <div className="space-y-6">
                 {[
                   {
-                    title: "Award-Winning Quality",
-                    description: "Our work has been recognized with 15+ industry awards for excellence in animation.",
+                    title: "Creative & Passionate Team",
+                    description: "We’re a group of students who love bringing ideas to life. Every project is a chance to learn, experiment, and make something amazing.",
                   },
                   {
-                    title: "Experienced Team",
-                    description: "Over 50 talented artists with decades of combined experience in animation and VFX.",
+                    title: "Hands-On Learning",
+                    description: "We combine creativity with critical thinking, from scripting and storyboarding to production and post-production, ensuring every detail reflects our effort and learning.",
                   },
                   {
-                    title: "Cutting-Edge Technology",
-                    description: "We utilize the latest tools and techniques to deliver stunning, modern animations.",
+                    title: "Up-to-Date Tools",
+                    description: "We work with modern animation and design software to create polished projects that meet current standards.",
                   },
                   {
-                    title: "Client-Focused",
-                    description: "Your vision is our priority. We collaborate closely to ensure your complete satisfaction.",
+                    title: "Your Vision, Our Focus",
+                    description: "We collaborate closely with you to turn your ideas into animations that communicate your story clearly and creatively.",
                   },
                 ].map((item, index) => (
                   <motion.div
@@ -226,32 +231,32 @@ export function Services() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-purple-500/20"
             >
-              <h3 className="text-3xl font-bold mb-6">Ready to Get Started?</h3>
+              <h3 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h3>
               <p className="text-zinc-400 mb-8">
-                Let's discuss your project and bring your creative vision to life with stunning animation.
+                Let’s bring your ideas to life! From planning and design to final animations, we’ll help turn your creative concepts into a polished showcase that’s ready to share with your audience.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
                     ✓
                   </div>
-                  <span>Free initial consultation</span>
+                  <span>Step-by-step guidance from concept to final animation</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
                     ✓
                   </div>
-                  <span>Detailed project proposal</span>
+                  <span>Support and feedback throughout your project</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
                     ✓
                   </div>
-                  <span>Flexible payment options</span>
+                  <span>Tips and assistance to share your work online or in class</span>
                 </div>
               </div>
               <button className="mt-8 w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
-                Schedule a Consultation
+                Start Your Project
               </button>
             </motion.div>
           </div>

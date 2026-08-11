@@ -2,6 +2,9 @@ import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import logo from "../../assets/Logo (2) ngani.png";
+
+
 
 export function Root() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,10 +25,8 @@ export function Root() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="text-2xl font-bold text-white">
-              <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                AetherLight Studio
-              </span>
-            </Link>
+  <img src={logo} alt="AetherLight Studio Logo" className="h-17" />
+</Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
@@ -96,12 +97,13 @@ export function Root() {
             <div>
               <h3 className="text-xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  AnimaStudio
+                  <Link to="/" className="text-2xl font-bold text-white">
+  <img src={logo} alt="AetherLight Studio Logo" className="h-17" />
+</Link>
                 </span>
               </h3>
-              <p className="text-zinc-400 text-sm">
-                Bringing stories to life through stunning animation and creative
-                excellence.
+              <p className="text-zinc-400 text-sm mt-3">
+                A creative studio dedicated to animation, visual design, and storytelling.
               </p>
             </div>
 
@@ -123,15 +125,18 @@ export function Root() {
             <div>
               <h4 className="text-white font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-zinc-400 text-sm">
-                <p>hello@animastudio.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>123 Animation Street, Creative City</p>
+                <p>studioaetherlight@gmail.com</p>
+                <p>+63 900 000 0000</p>
+                <p>Olongapo City Sports Complex 
+                   Donor Street, East Tapinac
+                   Olongapo City, PH 2200
+                </p>
               </div>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-zinc-800 text-center text-zinc-500 text-sm">
-            <p>&copy; 2026 AnimaStudio. All rights reserved.</p>
+            <p>&copy; 2026 AetherLight Studio. All rights reserved.</p>
           </div>
         </div>
       </footer>

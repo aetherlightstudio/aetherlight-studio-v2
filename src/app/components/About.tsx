@@ -1,37 +1,44 @@
 import { motion } from "motion/react";
 import { Users, Target, Award, Heart } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import aetherlightLogo from "../../assets/AETHERLIGHT STUDIO.png";
+import lawrenceImg from "../../assets/Lawrence (1).jpg";
+import danielImg from "../../assets/Daniel.jpg";
+import sebasthianImg from "../../assets/Sebasthian.jpg";
+import justinImg from "../../assets/BADING.png";
+import princessImg from "../../assets/Princess.jpg";
 
 export function About() {
   const values = [
     {
       icon: Heart,
       title: "Passion",
-      description: "We pour our hearts into every frame, creating animations that resonate.",
+      description: "We put creativity and dedication into every project, ensuring that each animation reflects imagination and purpose.",
     },
     {
       icon: Target,
       title: "Precision",
-      description: "Attention to detail is our hallmark, ensuring perfection in every project.",
+      description: "We value attention to detail, ensuring that every frame and design element contributes to a clear and engaging story.",
     },
     {
       icon: Award,
       title: "Excellence",
-      description: "Award-winning quality drives us to exceed expectations consistently.",
+      description: "We strive to create high-quality animations that inspire, educate, and communicate ideas effectively.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "We work closely with clients to bring their unique visions to life.",
+      description: "We believe great ideas grow through teamwork, collaboration, and shared creativity.",
     },
   ];
 
   const team = [
-    { name: "Sarah Mitchell", role: "Creative Director", specialty: "Character Design" },
-    { name: "James Chen", role: "Lead Animator", specialty: "3D Animation" },
-    { name: "Emily Rodriguez", role: "Art Director", specialty: "Visual Development" },
-    { name: "Marcus Johnson", role: "Senior Animator", specialty: "Motion Graphics" },
-  ];
+  { name: "Lawrence Mallari", role: "2D | 3D Animator", specialty: "Programming", image: lawrenceImg },
+  { name: "Daniel Gatan", role: "3D Animator | Visual Artist", specialty: "3D Animation", image: danielImg },
+  { name: "Sebasthian Ezyquel De Martin", role: "Art Director | VFX Artists", specialty: "Visual Development", image: sebasthianImg },
+  { name: "Justin Nathen Bragas", role: "Graphic Designer | Multimedia Artists", specialty: "Video Editing", image: justinImg },
+  { name: "Princess Darla Mae Dayrit", role: "Character Designer | Concept Artists", specialty: "Motion Graphics", image: princessImg },
+];
 
   return (
     <div className="bg-zinc-950 text-white">
@@ -48,8 +55,7 @@ export function About() {
               About <span className="text-purple-400">Us</span>
             </h1>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-              A team of passionate artists and storytellers dedicated to pushing
-              the boundaries of animation.
+              AetherLight Studio is a creative animation and multimedia studio dedicated to bringing ideas to life through 2D and 3D animation, storytelling, and digital design. We are a team of passionate creators who believe that imagination, emotion, and technology can work together to produce meaningful visual experiences.
             </p>
           </motion.div>
         </div>
@@ -66,25 +72,25 @@ export function About() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                Our <span className="text-purple-400">Story</span>
+                Who We Are<span className="text-white-400"></span>
               </h2>
               <div className="space-y-4 text-zinc-400">
                 <p>
-                  Founded in 2016, AnimaStudio began with a simple vision: to create
-                  animations that don't just look beautiful, but tell compelling
-                  stories that move people.
+                  AetherLight Studio is a creative animation and multimedia 
+                  studio dedicated to bringing ideas to life through 2D and 3D animation, storytelling, and digital design. 
+                  We are a team of passionate creators who believe that imagination, emotion, and technology 
+                  can work together to produce meaningful visual experiences.
                 </p>
                 <p>
-                  What started as a small team of three passionate animators has
-                  grown into an award-winning studio with over 50 talented artists,
-                  designers, and storytellers. We've had the privilege of working
-                  with some of the world's most recognized brands and
-                  entertainment companies.
+                  Rooted in creativity and innovation, our studio focuses on crafting engaging stories, educational content, and visually 
+                  compelling animations that inspire, inform, and connect with audiences. From animated films and motion graphics 
+                  to interactive and instructional media, we aim to transform complex ideas into simple, clear, and beautiful visuals.
                 </p>
                 <p>
-                  Today, we continue to innovate and push the boundaries of what's
-                  possible in animation, blending cutting-edge technology with
-                  timeless storytelling principles.
+                  At AetherLight Studio, we don’t just create animations 
+                  we build worlds, shape narratives, and illuminate ideas. 
+                  Our mission is to spark curiosity, encourage learning, 
+                  and push creative boundaries, one frame at a time.
                 </p>
               </div>
             </motion.div>
@@ -96,19 +102,21 @@ export function About() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1758873269276-9518d0cb4a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBtZWV0aW5nfGVufDF8fHx8MTc3MTA0ODAxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Creative team"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 max-w-xs">
-                <p className="text-sm font-semibold">
-                  "Creating visual magic that inspires and entertains audiences
-                  worldwide."
-                </p>
-              </div>
+              <div className="aspect-[4/3] flex items-center justify-center">
+                <div className="w-[85%] h-[83%] rounded-2xl overflow-hidden bg-white flex items-center justify-center">
+                  <ImageWithFallback
+                    src={aetherlightLogo}
+                    alt="AetherLight Studio Logo"
+                    className="w-full h-full object-contain scale-[.93]"
+                  />
+                </div>
+</div>
+
+            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 max-w-xs">
+              <p className="text-sm font-semibold">
+                "AetherLight Studio brings creativity, storytelling, and technology together to transform ideas into meaningful visual experiences."
+              </p>
+            </div>
             </motion.div>
           </div>
         </div>
@@ -128,7 +136,7 @@ export function About() {
               Our <span className="text-purple-400">Values</span>
             </h2>
             <p className="text-zinc-400 text-lg">
-              The principles that guide everything we create
+              The core values that inspire how we create, collaborate, and bring ideas to life
             </p>
           </motion.div>
 
@@ -164,42 +172,41 @@ export function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Meet the <span className="text-purple-400">Team</span>
+              Meet Our <span className="text-purple-400">Team</span>
             </h2>
             <p className="text-zinc-400 text-lg">
-              Talented artists bringing creativity to every project
+              Artists working together to bring ideas to life.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 mb-4 flex items-center justify-center overflow-hidden">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-4xl font-bold">
-                    {member.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-purple-400 text-sm mb-1">{member.role}</p>
-                <p className="text-zinc-500 text-sm">{member.specialty}</p>
-              </motion.div>
+             <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: index * 0.1 }}
+  viewport={{ once: true }}
+  className="group text-center"
+>
+  <div className="aspect-square rounded-2xl overflow-hidden mb-4">
+  <img
+    src={member.image}
+    alt={member.name}
+    className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+  />
+</div>
+  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+  <p className="text-purple-400 text-sm mb-1">{member.role}</p>
+  <p className="text-zinc-500 text-sm">{member.specialty}</p>
+</motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-zinc-900/50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-zinc-900/50 -mt-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -211,12 +218,32 @@ export function About() {
             Our <span className="text-purple-400">Mission</span>
           </h2>
           <p className="text-xl text-zinc-400 leading-relaxed">
-            To craft extraordinary animations that captivate audiences, amplify
-            brand messages, and push the boundaries of visual storytelling. We
-            believe in the power of animation to inspire, entertain, and create
-            lasting emotional connections.
+            Our mission is to design and produce high-quality animation-based instructional guides 
+            that simplify complex technical concepts, enhance learner engagement, and support competency-based training.
+            By collaborating with educational institutions and training organizations such as TESDA, 
+            we aim to improve learning outcomes in Computer Systems Servicing (CSS) 
+            NC II—beginning with computer network setup through accurate, practical, and learner-centered animated instruction.
           </p>
         </motion.div>
+        
+        {/* Vision Section */}
+<section className="py-30 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-zinc-900/50 mt-18">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="max-w-4xl mx-auto text-center"
+  >
+    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      Our <span className="text-purple-400">Vision</span>
+    </h2>
+    <p className="text-xl text-zinc-400 leading-relaxed">
+      Our Vision is to become a leading animation studio that transforms technical education through innovative, accessible, 
+      and visually engaging instructional content, empowering learners to develop industry-ready skills for the digital workforce.
+    </p>
+  </motion.div>
+</section>
       </section>
     </div>
   );

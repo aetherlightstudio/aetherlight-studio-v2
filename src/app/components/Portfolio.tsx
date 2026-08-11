@@ -1,75 +1,133 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import lawrence1 from "../../assets/lawrence1.jpg";
+import lawrence2 from "../../assets/lawrence2.jpg";
+import lawrenceVideo from "../../assets/lawrence3.mp4";
+import daniel1 from "../../assets/daniel1.jpg";
+import daniel2 from "../../assets/daniel2.jpg";
+import daniel3 from "../../assets/daniel3.jpg";
+import sebasthian1Video from "../../assets/sebasthian1.mp4";
+import sebasthian3 from "../../assets/sebasthian3.jpg";
+import sebasthian2Video from "../../assets/sebasthian2.mp4";
+import darla1 from "../../assets/darla1.jpg";
+import darla2 from "../../assets/darla2.jpg";
+import darla3 from "../../assets/darla3.jpg";
+import justin1 from "../../assets/justin1.jpg";
+import justin2 from "../../assets/justin2.jpg";
+import justin3 from "../../assets/justin3.jpg";
+
 
 export function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Character Design", "Motion Graphics", "Brand Identity", "Visual Effects"];
+  const categories = ["All", "Lawrence's Work", "Daniel's Work", "Sebasthian's Work", "Princess's Work", "Justin's Work"];
 
   const projects = [
     {
       id: 1,
-      title: "3D Character Animation",
-      category: "Character Design",
-      image: "https://images.unsplash.com/photo-1728671404196-3583750ed3d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMGNoYXJhY3RlciUyMGFuaW1hdGlvbnxlbnwxfHx8fDE3NzEwNDQ4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Entertainment Studio",
+      title: "3D Character Modelled and Rigged",
+      category: "Lawrence's Work",
+      image: lawrence1,
+      By:"Lawrence Mallari",
     },
     {
       id: 2,
-      title: "Motion Graphics Reel",
-      category: "Motion Graphics",
-      image: "https://images.unsplash.com/photo-1759267487608-23b5cffcb3a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rpb24lMjBncmFwaGljcyUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MTA4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Tech Brand",
+      title: "Motion Graphics Logo",
+      category: "Daniel's Work",
+      image: daniel1,
+      By:"Daniel Gatan",
     },
     {
       id: 3,
-      title: "Digital Art Concept",
-      category: "Visual Effects",
-      image: "https://images.unsplash.com/photo-1765445665883-085301570c87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYXJ0JTIwY3JlYXRpdmV8ZW58MXx8fHwxNzcxMTI1NjQwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Gaming Company",
+      title: "2D Motion Graphics Logo Animation",
+      category: "Sebasthian's Work",
+      video: sebasthian1Video,
+      By:"Sebasthian Ezyquel De Martin",
     },
     {
       id: 4,
-      title: "Brand Identity Animation",
-      category: "Brand Identity",
-      image: "https://images.unsplash.com/photo-1673767297196-ce9739933932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBzdHVkaW98ZW58MXx8fHwxNzcxMDc5MDk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Startup Inc.",
+      title: "Sample Logos and Poster Designs",
+      category: "Princess's Work",
+      image: darla1,
+      By:"Princess Darla Mae Dayrit",
     },
     {
       id: 5,
-      title: "Character Design Series",
-      category: "Character Design",
-      image: "https://images.unsplash.com/photo-1728671404196-3583750ed3d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMGNoYXJhY3RlciUyMGFuaW1hdGlvbnxlbnwxfHx8fDE3NzEwNDQ4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Animation Network",
+      title: "2D Character Designed and Animate",
+      category: "Lawrence's Work",
+      image: lawrence2,
+      By:"Lawrence Mallari",
     },
     {
       id: 6,
-      title: "Motion Identity Package",
-      category: "Motion Graphics",
-      image: "https://images.unsplash.com/photo-1759267487608-23b5cffcb3a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3Rpb24lMjBncmFwaGljcyUyMGNvbG9yZnVsfGVufDF8fHx8MTc3MTA4MDEwMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Media Company",
+      title: "Zombie 3D Animation",
+      category: "Daniel's Work",
+      image: daniel2,
+      By:"Daniel Gatan",
     },
     {
       id: 7,
-      title: "VFX Showreel",
-      category: "Visual Effects",
-      image: "https://images.unsplash.com/photo-1765445665883-085301570c87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYXJ0JTIwY3JlYXRpdmV8ZW58MXx8fHwxNzcxMTI1NjQwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Film Studio",
+      title: "VFX Foley 2D and 3D",
+      category: "Sebasthian's Work",
+      image: sebasthian3,
+      By:"Sebasthian Ezyquel De Martin",
     },
     {
       id: 8,
-      title: "Brand Launch Campaign",
-      category: "Brand Identity",
-      image: "https://images.unsplash.com/photo-1673767297196-ce9739933932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMHByb2R1Y3Rpb24lMjBzdHVkaW98ZW58MXx8fHwxNzcxMDc5MDk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Fortune 500",
+      title: "Sample 2D and 3D Animations",
+      category: "Princess's Work",
+      image: darla2,
+      By:"Princess Darla Mae Dayrit",
     },
     {
       id: 9,
-      title: "Animated Characters",
-      category: "Character Design",
-      image: "https://images.unsplash.com/photo-1728671404196-3583750ed3d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzZCUyMGNoYXJhY3RlciUyMGFuaW1hdGlvbnxlbnwxfHx8fDE3NzEwNDQ4Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      client: "Theme Park",
+      title: "3D Character Animated",
+      category: "Lawrence's Work",
+       video: lawrenceVideo,
+      By:"Lawrence Mallari",
+    },
+     {
+      id: 10,
+      title: "Poster Design 1",
+      category: "Justin's Work",
+      image: justin1,
+      By:"Justin Nathen Bragas",
+    },
+     {
+      id: 11,
+      title: "Vogue Magazine Design",
+      category: "Justin's Work",
+      image: justin2,
+      By:"Justin Nathen Bragas",
+    },
+    {
+      id: 12,
+      title: "Poster Design 2",
+      category: "Justin's Work",
+      image: justin3,
+      By:"Justin Nathen Bragas",
+    },
+    {
+      id: 13,
+      title: "3D Acting Animation",
+      category: "Daniel's Work",
+      image: daniel3,
+      By:"Daniel Gatan",
+    },
+    {
+      id: 14,
+      title: "3D Motion Graphics Logo Animation",
+      category: "Sebasthian's Work",
+      video: sebasthian2Video,
+      By:"Sebasthian Ezyquel De Martin",
+    },
+    {
+      id: 15,
+      title: "Basic 3D Modelling and Character Designs",
+      category: "Princess's Work",
+      image: darla3,
+      By:"Princess Darla Mae Dayrit",
     },
   ];
 
@@ -92,8 +150,7 @@ export function Portfolio() {
               Our <span className="text-purple-400">Portfolio</span>
             </h1>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-              Explore our collection of award-winning animations and creative
-              projects that have captivated audiences worldwide.
+              Take a look at the animations, character designs, and creative projects crafted by our talented team. Every piece tells a story!
             </p>
           </motion.div>
         </div>
@@ -144,23 +201,42 @@ export function Portfolio() {
                 className="group cursor-pointer"
               >
                 <div className="relative overflow-hidden rounded-2xl mb-4">
-                  <div className="aspect-[4/5]">
-                    <ImageWithFallback
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="inline-block px-3 py-1 bg-purple-500/80 backdrop-blur-sm rounded-full text-xs font-medium mb-3">
-                        {project.category}
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-sm text-zinc-300">Client: {project.client}</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-[4/5] relative bg-zinc-900 flex items-center justify-center">
+
+              {project.video ? (
+                <video
+                  controls
+                  className="w-full h-full object-contain"
+                >
+                  <source src={project.video} type="video/mp4" />
+                </video>
+              ) : (
+                <ImageWithFallback
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
+
+    {/* Overlay Text */}
+    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <div className="p-6">
+        <div className="inline-block px-3 py-1 bg-purple-500/80 backdrop-blur-sm rounded-full text-xs font-medium mb-3">
+          {project.category}
+        </div>
+
+        <h3 className="text-xl font-bold mb-2">
+          {project.title}
+        </h3>
+
+        <p className="text-sm text-zinc-300">
+          By: {project.By}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
               </motion.div>
             ))}
           </motion.div>
@@ -178,14 +254,14 @@ export function Portfolio() {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-12">
-              Proven <span className="text-purple-400">Excellence</span>
+              Our Creative <span className="text-purple-400">Journey</span>
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { number: "500+", label: "Projects" },
-                { number: "98%", label: "Client Satisfaction" },
-                { number: "15", label: "Industry Awards" },
-                { number: "50+", label: "Global Clients" },
+                { number: "15+", label: "Creative Works" },
+                { number: "5", label: "Team Members" },
+                { number: "10+", label: "Animation & Design Projects" },
+                { number: "100%", label: "Passion for Creativity" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
