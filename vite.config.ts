@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/studioaetherlight/',
+  base: '/aetherlight-studio-v2/',
 
   plugins: [
     react(),
