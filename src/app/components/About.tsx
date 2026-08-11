@@ -6,7 +6,7 @@ import lawrenceImg from "../../assets/Lawrence (1).jpg";
 import danielImg from "../../assets/Daniel.jpg";
 import sebasthianImg from "../../assets/badings.jpg";
 import justinImg from "../../assets/BADING.png";
-import princessImg from "../../assets/Princess.jpg";
+import princessImg from "../../assets/darlagaga.jpg";
 
 export function About() {
   const values = [
