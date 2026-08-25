@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Sparkles, Film, Palette, Zap, Package, TrendingUp } from "lucide-react";
+import { Link } from "react-router";
 
 export function Services() {
   const services = [
@@ -255,9 +256,12 @@ export function Services() {
                   <span>Tips and assistance to share your work online or in class</span>
                 </div>
               </div>
-              <button className="mt-8 w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
-                Start Your Project
-              </button>
+              <Link
+              to="/contact#contact-section"
+              className="mt-8 w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all block text-center"
+            >
+              Start Your Project
+            </Link>
             </motion.div>
           </div>
         </div>

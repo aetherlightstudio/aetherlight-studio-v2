@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { Play, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import animImg from "../../assets/animation.jpg";
-import designImg from "../../assets/digital-design (1).jpg";
-import storyImg from "../../assets/storytelling.jpg";
+import animImg from "../../assets/animation1.png";
+import designImg from "../../assets/darla5.jpg";
+import storyImg from "../../assets/motiongraphics.jpg";
 
 export function Home() {
   const portfolio = [
@@ -14,19 +14,19 @@ export function Home() {
     category: "Animation",
     image: animImg,
   },
-    {
-      id: 2,
+  {
+    id: 2,
     title: "We create visually compelling designs that communicate ideas with clarity and creativity.",
-    category: "Digital Design",
+    category: "Graphic Design",
     image: designImg,
-    },
-    {
-      id: 3,
-    title: "We transform imagination into meaningful visual narratives that inspire and connect with audiences.",
-    category: "Visual Storytelling",
+  },
+  {
+    id: 3,
+    title: "We transform ideas into dynamic visual experiences through movement, design, and animation.",
+    category: "Motion Graphics",
     image: storyImg,
-    },
-  ];
+  },
+];
 
   return (
     <div className="bg-zinc-950 text-white">
@@ -89,12 +89,10 @@ export function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto"
+            className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto text-center leading-relaxed"
           >
-            The word “Light” symbolizes clarity, inspiration, and creativity. 
-            At AetherLight Studio, it represents our mission to transform ideas into meaningful visual stories through animation and digital design.
-            “Where Ideas Come to Light” reflects our commitment to bringing imagination to life turning concepts into motion, stories, 
-            and experiences that inspire.
+            AetherLight Studio brings ideas to life through animation,
+            storytelling, and digital design.
           </motion.p>
 
           <motion.div
@@ -119,20 +117,6 @@ export function Home() {
             </Link>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-20"
-          >
-            <p className="text-s text-zinc-500 mb-5">Creative Tools We Use</p>
-            <div className="flex items-center justify-center gap-6 flex-wrap opacity-40">
-              <span className="text-2xl font-bold">BLENDER</span>
-              <span className="text-2xl font-bold">PHOTOSHOP</span>
-              <span className="text-2xl font-bold">AFTER EFFECTS</span>
-              <span className="text-2xl font-bold">ILLUSTRATOR</span>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -157,30 +141,152 @@ export function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
             {portfolio.map((item, index) => (
-              <motion.div
+
+              <Link
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer"
+                to={`/portfolio?section=${item.category.toLowerCase().replace(/\s+/g, "-")}`}
+                className="block"
               >
-              <div className="relative w-full overflow-hidden rounded-2xl">
-                <ImageWithFallback
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent opacity-80" />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-purple-400 text-xl mb-2">{item.category}</p>
-                  <h3 className="text-lg font-bold">{item.title}</h3>
-                </div>
-              </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10 }}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-2xl
+                    cursor-pointer
+                    border
+                    border-transparent
+                    hover:border-purple-500/50
+                    transition-all
+                    duration-300
+                  "
+                >
+
+                  {/* IMAGE */}
+
+                  <div className="relative w-full overflow-hidden rounded-2xl">
+
+                    <ImageWithFallback
+                      src={item.image}
+                      alt={item.category}
+                      className="
+                        w-full
+                        h-auto
+                        object-contain
+                        transition-transform
+                        duration-500
+                        group-hover:scale-105
+                      "
+                    />
+
+                    {/* DARK OVERLAY */}
+
+                    <div className="
+                      absolute
+                      inset-0
+                      bg-gradient-to-t
+                      from-zinc-950
+                      via-zinc-950/50
+                      to-transparent
+                      opacity-80
+                    " />
+
+                    {/* VIEW WORK */}
+
+                    <div className="
+                      absolute
+                      inset-0
+                      flex
+                      items-center
+                      justify-center
+                      opacity-0
+                      group-hover:opacity-100
+                      transition-opacity
+                      duration-300
+                    ">
+
+                     <span className="
+  px-5
+  py-2.5
+  rounded-full
+  bg-gradient-to-r
+  from-purple-500
+  to-pink-500
+  text-white
+  border
+  border-transparent
+  text-sm
+  font-medium
+  transition-all
+  duration-300
+  group-hover:scale-105
+  group-hover:shadow-lg
+  group-hover:shadow-purple-500/50
+">
+  View {item.category}
+  <ArrowRight
+    size={16}
+    className="
+      inline
+      ml-2
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+</span>
+
+                    </div>
+
+                  </div>
+
+
+                  {/* TEXT */}
+
+                  <div className="
+                    absolute
+                    bottom-0
+                    left-0
+                    right-0
+                    p-6
+                  ">
+
+                    <p className="
+                      text-purple-400
+                      text-xl
+                      font-semibold
+                      mb-2
+                      drop-shadow-md
+                    ">
+                      {item.category}
+                    </p>
+
+                    <h3 className="
+                      text-lg
+                      font-bold
+                    ">
+                      {item.title}
+                    </h3>
+
+                  </div>
+
+                </motion.div>
+
+              </Link>
+
             ))}
+
           </div>
 
           <motion.div
