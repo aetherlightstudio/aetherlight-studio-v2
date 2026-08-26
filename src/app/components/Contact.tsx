@@ -1,10 +1,14 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useEffect } from "react";
+import { useLocation } from "react-router";
 
 export function Contact() {
 
-  useEffect(() => {
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash === "#contact-section") {
     const targetSection = document.getElementById("contact-section");
 
     if (targetSection) {
@@ -15,7 +19,8 @@ export function Contact() {
         });
       }, 100);
     }
-  }, []);
+  }
+}, [location]);
 
 
   // =========================

@@ -20,7 +20,11 @@ import darla4 from "../../assets/darla4.jpg";
 import justin4 from "../../assets/justin4.jpg";
 import poster from "../../assets/poster.jpg";
 
-
+import animationThumb from "../../assets/3Danimation-thumb.jpg";
+import capstoneThumb from "../../assets/capstone1-thumb.jpg";
+import mg2Thumb from "../../assets/mg2-thumb.jpg";
+import sebasthian1Thumb from "../../assets/sebasthian1-thumb.jpg";
+import sebasthian2Thumb from "../../assets/sebasthian2-thumb.jpg";
 
 export function Portfolio() {
 
@@ -64,6 +68,7 @@ export function Portfolio() {
       title: "3D Animation — The Fantabulous Mind of a Wunderkind",
       category: "Animation",
       video: animationVideo,
+      image: animationThumb,
       By: "AetherLight Studio",
     },
 
@@ -72,6 +77,7 @@ export function Portfolio() {
       title: "Capstone Project — Animated Instructional Guide for CORE II: Setup Computer Networks in TESDA CSS NC II",
       category: "Animation",
       video: capstoneVideo,
+      image: capstoneThumb,
       By: "AetherLight Studio",
     },
 
@@ -80,6 +86,7 @@ export function Portfolio() {
       title: "Motion Graphics",
       category: "Motion Graphics",
       video: mg2Video,
+      image: mg2Thumb,
       By: "Lawrence & Daniel",
     },
 
@@ -88,6 +95,7 @@ export function Portfolio() {
       title: "Motion Graphics",
       category: "Motion Graphics",
       video: sebasthian1Video,
+      image: sebasthian1Thumb,
       By: "Princess Darla Mae Dayrit",
     },
     
@@ -96,6 +104,7 @@ export function Portfolio() {
       title: "Motion Graphics",
       category: "Motion Graphics",
       video: sebasthian2Video,
+      image: sebasthian2Thumb,
       By: "Sebasthian & Justin",
     },
 
@@ -398,29 +407,20 @@ export function Portfolio() {
 
                               {project.video ? (
 
-                                <video
-                                  muted
-                                  playsInline
-                                  preload="metadata"
-                                  className="
-                                    w-full
-                                    h-full
-                                    object-contain
-                                    pointer-events-none
-                                    transition-transform
-                                    duration-500
-                                    group-hover:scale-105
-                                  "
-                                >
+                              <img
+                                src={project.image}
+                                alt={project.title}
+                                className="
+                                  w-full
+                                  h-full
+                                  object-contain
+                                  transition-transform
+                                  duration-500
+                                  group-hover:scale-105
+                                "
+                              />
 
-                                  <source
-                                    src={project.video}
-                                    type="video/mp4"
-                                  />
-
-                                </video>
-
-                              ) : (
+                            ) : (
 
                                 <ImageWithFallback
                                   src={project.image}
@@ -648,30 +648,20 @@ export function Portfolio() {
 
                     {project.video ? (
 
-                      <video
-                        muted
-                        playsInline
-                        preload="metadata"
-                        className="
-                          w-full
-                          h-full
-                          object-contain
-                          pointer-events-none
-                          transition-transform
-                          duration-500
-                          group-hover:scale-105
-                        "
-                      >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="
+                        w-full
+                        h-full
+                        object-contain
+                        transition-transform
+                        duration-500
+                        group-hover:scale-105
+                      "
+                    />
 
-                        <source
-                          src={project.video}
-                          type="video/mp4"
-                        />
-
-                      </video>
-
-                    ) : (
-
+                  ) : (
                       <ImageWithFallback
                         src={project.image}
                         alt={project.title}
