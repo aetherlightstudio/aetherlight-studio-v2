@@ -217,8 +217,8 @@ export function Home() {
                     ">
 
                      <span className="
-  px-5
-  py-2.5
+  px-4
+  py-2
   rounded-full
   bg-gradient-to-r
   from-purple-500
@@ -226,7 +226,8 @@ export function Home() {
   text-white
   border
   border-transparent
-  text-sm
+  text-xs
+  sm:text-sm
   font-medium
   transition-all
   duration-300
@@ -236,10 +237,10 @@ export function Home() {
 ">
   View {item.category}
   <ArrowRight
-    size={16}
+    size={14}
     className="
       inline
-      ml-2
+      ml-1.5
       transition-transform
       duration-300
       group-hover:translate-x-1

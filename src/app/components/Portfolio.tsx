@@ -474,22 +474,27 @@ export function Portfolio() {
                               >
 
                                 <span
-                                  className="
-                                    px-5
-                                    py-2.5
-                                    rounded-full
-                                    bg-white/10
-                                    backdrop-blur-md
-                                    border
-                                    border-white/20
-                                    text-sm
-                                    font-medium
-                                  "
-                                >
-
-                                  View Project
-
-                                </span>
+  className="
+    px-5
+    py-2.5
+    rounded-full
+    bg-gradient-to-r
+    from-purple-500
+    to-pink-500
+    text-white
+    border
+    border-transparent
+    text-sm
+    font-medium
+    transition-all
+    duration-300
+    group-hover:scale-105
+    group-hover:shadow-lg
+    group-hover:shadow-purple-500/50
+  "
+>
+  View Project
+</span>
 
                               </div>
 
@@ -719,22 +724,27 @@ export function Portfolio() {
                     >
 
                       <span
-                        className="
-                          px-5
-                          py-2.5
-                          rounded-full
-                          bg-white/10
-                          backdrop-blur-md
-                          border
-                          border-white/20
-                          text-sm
-                          font-medium
-                        "
-                      >
-
-                        View Project
-
-                      </span>
+  className="
+    px-5
+    py-2.5
+    rounded-full
+    bg-gradient-to-r
+    from-purple-500
+    to-pink-500
+    text-white
+    border
+    border-transparent
+    text-sm
+    font-medium
+    transition-all
+    duration-300
+    group-hover:scale-105
+    group-hover:shadow-lg
+    group-hover:shadow-purple-500/50
+  "
+>
+  View Project
+</span>
 
                     </div>
 
